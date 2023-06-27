@@ -4,9 +4,21 @@ const app =Vue.createApp({
     name:'Vue email',
     data(){
         return{
-            email:'',
+            emails:[],
         }
-    }
+    },
+    methods:{
+        newEmail(){
+            for(let i=0;i<10;i++){
+                axios.get(instace).then((res)=>{
+                    this.emails.push(res.data.response);
+                });
+            }
+        },
+    },
+    created(){
+        this.newEmail();
+    },
 });
 
 app.mount('#root')

@@ -12,7 +12,7 @@
 <body>
     <div id="root">
         <ul>
-            <li></li>
+            <li v-for="email in emails" v-show="emails.length===10">{{email}}</li>
         </ul>
     </div>
     <script src="script.js"></script>
